@@ -1,0 +1,82 @@
+[
+  {
+    "status": "Active",
+    "supplierName": "Supplier1",
+    "month": "January",
+    "phase": "Deployment",
+    "order": 1,
+    "amount": 5000
+  },
+  {
+    "status": "Pending Approval",
+    "supplierName": "Supplier2",
+    "month": "February",
+    "phase": "Development",
+    "order": 2,
+    "amount": 8000
+  },
+  {
+    "status": "Waiting Compensation",
+    "supplierName": "Supplier3",
+    "month": "March",
+    "phase": "Research",
+    "order": 3,
+    "amount": 10000
+  },
+  {
+    "status": "Active",
+    "supplierName": "Supplier4",
+    "month": "April",
+    "phase": "Deployment",
+    "order": 4,
+    "amount": 6000
+  },
+  {
+    "status": "Pending Approval",
+    "supplierName": "Supplier5",
+    "month": "May",
+    "phase": "Development",
+    "order": 5,
+    "amount": 9000
+  },
+  {
+    "status": "Waiting Compensation",
+    "supplierName": "Supplier6",
+    "month": "June",
+    "phase": "Research",
+    "order": 6,
+    "amount": 12000
+  },
+  {
+    "status": "Active",
+    "supplierName": "Supplier7",
+    "month": "July",
+    "phase": "Deployment",
+    "order": 7,
+    "amount": 7000
+  },
+  {
+    "status": "Pending Approval",
+    "supplierName": "Supplier8",
+    "month": "August",
+    "phase": "Development",
+    "order": 8,
+    "amount": 9500
+  },
+  {
+    "status": "Waiting Compensation",
+    "supplierName": "Supplier9",
+    "month": "September",
+    "phase": "Research",
+    "order": 9,
+    "amount": 11000
+  },
+  {
+    "status": "Active",
+    "supplierName": "Supplier10",
+    "month": "October",
+    "phase": "Deployment",
+    "order": 10,
+    "amount": 7500
+  }
+]
