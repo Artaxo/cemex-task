@@ -1,1 +1,17 @@
-<p>table works!</p>
+
+<app-table-filter (statusFilterChanged)="handleStatusFilterChanged($event)"></app-table-filter>
+
+<div class="table-header table-layout">
+  <div class="cell"> Status </div>
+  <div class="cell"> Supplier name </div>
+  <div class="cell"> Month </div>
+  <div class="cell"> Phase </div>
+  <div class="cell"> Internal Order </div>
+  <div class="cell"> Amount (USD) </div>
+</div>
+
+<div *ngFor="let entity of tableData">
+  <app-table-entity *ngIf="statusFilter.includes(entity.status)" [entity]="entity" />
+</div>
+
+<!-- TODO Nice to have, display info message when there are no data to display -->

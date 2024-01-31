@@ -1,1 +1,7 @@
-<p>table-filter works!</p>
+<app-card>
+  <form class="filter-form" [formGroup]="checkboxForm">
+    <app-checkbox [control]="checkboxForm.controls['activeFilter']" [label]="'Active'"></app-checkbox>
+    <app-checkbox [control]="checkboxForm.controls['pendingFilter']" [label]="'Pending Approval'"></app-checkbox>
+    <app-checkbox [control]="checkboxForm.controls['waitingFilter']" [label]="'Waiting Compensation'"></app-checkbox>
+  </form>
+</app-card>

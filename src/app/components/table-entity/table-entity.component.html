@@ -1,1 +1,17 @@
-<p>table-entity works!</p>
+<app-card>
+  <div class="table-layout">
+    <div class="cell"
+         [ngClass]="{
+         'green': entity.status === statusEnum.ACTIVE,
+         'blue': entity.status === statusEnum.PENDING,
+         'ochre': entity.status === statusEnum.WAITING,
+    }">{{ entity.status }}
+    </div>
+    <hr class="mobile-divider">
+    <div class="cell">{{ entity.supplierName }}</div>
+    <div class="cell">{{ entity.month }}</div>
+    <div class="cell">{{ entity.phase }}</div>
+    <div class="cell">{{ entity.order }}</div>
+    <div class="cell">{{ entity.amount | currency:'':''}}</div>
+  </div>
+</app-card>
