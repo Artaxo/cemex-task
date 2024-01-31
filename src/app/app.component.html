@@ -1,0 +1,11 @@
+<div class="wrapper">
+
+  <div class="header-box">
+    <div class="main-header">CEMEX Go Online Stores</div>
+    <div class="sub-header">
+      Financial Management <span class="circle-dot"></span> CAPEX Management
+    </div>
+  </div>
+
+  <app-table [tableData]="(tableData$ | async) ?? []"></app-table>
+</div>
