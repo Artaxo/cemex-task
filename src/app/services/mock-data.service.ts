@@ -13,11 +13,11 @@ export class MockDataService {
   constructor(private http: HttpClient) {
   }
 
-  getData(): Observable<TableEntityModel> {
+  getData(): Observable<TableEntityModel[]> {
     return this.loadMockData(this.FILENAME);
   }
 
-  private loadMockData(endpoint: string): Observable<TableEntityModel> {
-    return this.http.get<TableEntityModel>(`/assets/mock-data/${endpoint}`);
+  private loadMockData(endpoint: string): Observable<TableEntityModel[]> {
+    return this.http.get<TableEntityModel[]>(`/assets/mock-data/${endpoint}`);
   }
 }
