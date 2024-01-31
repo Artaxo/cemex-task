@@ -1,0 +1,102 @@
+@use '../abstracts/colors' as *;
+
+@mixin cell-before($color) {
+  &::before {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    background-color: $color;
+    border-radius: 2px;
+  }
+}
+
+.wrapper {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 650px;
+  width: 70vw;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.header-box {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: left;
+  padding-left: 1rem;
+  color: $navyblue;
+}
+
+.table-header {
+  padding: 1rem 1rem 0 1rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+
+  .cell {
+    font-weight: unset !important;
+  }
+}
+
+.table-layout {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+
+  .cell{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    text-overflow: ellipsis;
+  }
+}
+
+.table-layout .cell {
+
+  text-align: left;
+
+  &:nth-of-type(1) {
+    flex: 0 0 25%;
+    padding-left: 0.5rem;
+
+    &.blue {
+      @include cell-before($lightblue);
+    }
+
+    &.green {
+      @include cell-before($green);
+    }
+
+    &.ochre {
+      @include cell-before($ochre);
+    }
+
+  }
+
+  &:nth-of-type(2) {
+    flex: 0 0 25%;
+  }
+
+  &:nth-of-type(3) {
+    flex: 0 0 10%;
+  }
+
+  &:nth-of-type(4) {
+    flex: 0 0 10%;
+  }
+
+  &:nth-of-type(5) {
+    flex: 0 0 15%;
+    justify-content: center;
+  }
+
+  &:nth-of-type(6) {
+    flex: 0 0 15%;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    font-weight: bolder;
+  }
+}

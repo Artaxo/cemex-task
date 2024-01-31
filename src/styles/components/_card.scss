@@ -1,0 +1,11 @@
+@use '../abstracts/colors' as *;
+
+app-card {
+  display: flex;
+  background: $white;
+  padding: 0.5rem;
+  height: 3rem;
+  margin: 0.6rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.1), 0 8px 10px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.02);
+}
