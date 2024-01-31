@@ -1,0 +1,105 @@
+@media (max-width: 600px) {
+
+  @mixin cell-before($item) {
+
+    flex: unset !important;
+    justify-content: unset !important;
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+
+    &::before {
+      content: $item;
+      width: 40%;
+      min-width: 40%;
+      display: block;
+      text-align: left;
+      position: relative;
+      margin-right: 0.5rem;
+      font-weight: bolder;
+      font-size: 0.9rem;
+    }
+  }
+
+
+  .table-header {
+    display: none !important;
+  }
+
+  .header-box {
+    margin-bottom: 2rem;
+  }
+
+  .wrapper {
+    display: block;
+    box-sizing: border-box;
+    min-width: unset;
+    width: 100vw;
+    max-width: unset;
+    margin-top: 2rem;
+  }
+
+  .table-layout {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .filter-form {
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-left: 0 !important;
+  }
+
+  .filter-form > * {
+    margin-bottom: 1rem;
+  }
+
+  .cell {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    text-overflow: ellipsis;
+
+    &:nth-of-type(1) {
+      flex: unset !important;
+      padding: 0.5rem 0 !important;
+
+      &::before {
+        width: 2rem !important;
+        height: 1.3rem !important;
+      }
+    }
+
+    &:nth-of-type(2) {
+      @include cell-before('Supplier Name');
+    }
+
+    &:nth-of-type(3) {
+      @include cell-before('Month');
+    }
+
+    &:nth-of-type(4) {
+      order: 1;
+      @include cell-before('Phase');
+    }
+
+    &:nth-of-type(5) {
+      @include cell-before('Internal Order');
+    }
+
+    &:nth-of-type(6) {
+      flex: unset;
+      position: absolute;
+      right: 2rem;
+      font-weight: bolder;
+      padding-right: 0 !important;
+      margin-top: 0.25rem !important;
+      font-size: 1.2rem !important;
+    }
+
+  }
+
+}

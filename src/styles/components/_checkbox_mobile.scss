@@ -1,0 +1,22 @@
+@use '../abstracts/colors' as *;
+
+@media (max-width: 600px) {
+
+  .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+
+  .checkbox-container {
+    padding-left: 2rem;
+  }
+
+  .checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+  }
+}
