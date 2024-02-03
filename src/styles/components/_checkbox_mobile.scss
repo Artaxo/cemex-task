@@ -1,6 +1,7 @@
 @use '../abstracts/colors' as *;
+@use '../abstracts/variables' as *;
 
-@media (max-width: 600px) {
+@media only screen and (max-width: $desktopBreakpoint) {
 
   .checkmark {
     height: 20px;
@@ -16,7 +17,7 @@
     top: 2px;
     width: 5px;
     height: 9px;
-    border: solid white;
+    border: solid $white;
     border-width: 0 3px 3px 0;
   }
 }

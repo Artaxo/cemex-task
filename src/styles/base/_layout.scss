@@ -1,6 +1,6 @@
 @use '../abstracts/colors' as *;
 
-@mixin cell-before($color) {
+@mixin cell-status-color($color) {
   &::before {
     content: '';
     display: block;
@@ -13,12 +13,11 @@
 }
 
 .wrapper {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
-  min-width: 650px;
-  width: 70vw;
+  min-width: 600px;
   max-width: 1200px;
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 .header-box {
@@ -63,15 +62,15 @@
     padding-left: 0.5rem;
 
     &.blue {
-      @include cell-before($lightblue);
+      @include cell-status-color($statusPending);
     }
 
     &.green {
-      @include cell-before($green);
+      @include cell-status-color($statusActive);
     }
 
     &.ochre {
-      @include cell-before($ochre);
+      @include cell-status-color($statusCompensation);
     }
 
   }
@@ -85,7 +84,6 @@
   }
 
   &:nth-of-type(4) {
-    flex: 0 0 10%;
   }
 
   &:nth-of-type(5) {
@@ -94,7 +92,6 @@
   }
 
   &:nth-of-type(6) {
-    flex: 0 0 15%;
     justify-content: flex-end;
     padding-right: 0.5rem;
     font-weight: bolder;

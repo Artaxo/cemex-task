@@ -1,4 +1,6 @@
-@media (max-width: 600px) {
+@use '../abstracts/variables' as *;
+
+@media only screen and (max-width: $desktopBreakpoint) {
 
   @mixin cell-before($item) {
 
