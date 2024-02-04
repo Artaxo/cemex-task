@@ -30,4 +30,8 @@ export class TableComponent {
   handleStatusFilterChanged(filter: StatusEnum[] | null): void {
     this.statusFilter = filter ?? [];
   }
+
+  get filteredData(): TableEntityModel[] {
+    return this.tableData.filter((entity=> this.statusFilter.includes(entity.status)));
+  }
 }
